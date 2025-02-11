@@ -16,6 +16,7 @@ body, html {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    transition: background-color 1s ease-in-out;
 }
 
 #quote-box {
@@ -31,6 +32,7 @@ body, html {
     background-color: white;
     border-radius: 8px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.618);
+    transition: color 1s ease-in-out, background-color 1s ease-in-out;
 }
 
 #author {
@@ -63,4 +65,13 @@ p {
 button:hover,
 a:hover {
     opacity: 0.8;
+}
+
+#text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1 !important;
 }
