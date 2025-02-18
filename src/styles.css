@@ -6,22 +6,22 @@
 
 body, html {
     height: 100%;
+    font-family: 'Trebuchet MS', sans-serif; /* Define a fonte para todo o site */
 }
 
 .background {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     height: 100vh;
     transition: background-color 1s ease-in-out;
+    padding: 20px; /* Adiciona espaçamento nas laterais */
 }
 
 #quote-box {
-    width: 90%;
-    width: 500px;
+    width: 90%;  /* Agora a largura será 90% da tela, mas com o max-width para não ficar grande demais */
+    max-width: 500px;  /* Define a largura máxima */
     margin: 0 auto;
     min-height: 300px;
     display: flex;
@@ -37,6 +37,8 @@ body, html {
 
 #author {
     text-align: right;
+    font-size: 1rem; /* Ajuste para o nome do autor */
+    margin-top: 0.5rem;
 }
 
 p {
@@ -60,6 +62,7 @@ p {
     border-radius: 8px;
     border: 1px solid transparent;
     cursor: pointer;
+    font-size: 1rem; /* Ajuste no tamanho da fonte dos botões */
 }
 
 button:hover,
@@ -74,4 +77,44 @@ a:hover {
 
 .fade-in {
     opacity: 1 !important;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    #quote-box {
+        padding: 1.5rem; /* Reduz o padding nas telas menores */
+    }
+
+    p {
+        font-size: 1rem; /* Reduz o tamanho da fonte das citações */
+    }
+
+    #text {
+        font-size: 1.1rem;  /* Ajuste o tamanho do texto */
+    }
+
+    button, a {
+        font-size: 0.9rem; /* Tamanho de fonte para botões em telas menores */
+        padding: 0.8rem 1rem; /* Ajusta o tamanho do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    #quote-box {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;  /* Ajuste de tamanho do texto */
+    }
+
+    #text {
+        font-size: 1rem;  /* Ajuste do tamanho da citação */
+    }
+
+    button, a {
+        font-size: 0.8rem;
+        padding: 0.7rem 1rem;
+    }
 }
